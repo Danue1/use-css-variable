@@ -1,6 +1,6 @@
 import { RefObject, useState } from 'react'
 import { clampByPercent } from './lib/clamp'
-import { useCSSVariableByRef } from './useCSSVariableByRef'
+import { useCSSVariableAsStringByRef } from './useCSSVariableAsStringByRef'
 
 export const useCSSVariableAsPercentByRef = <Element extends HTMLElement>(
   ref: RefObject<Element>,
@@ -9,7 +9,7 @@ export const useCSSVariableAsPercentByRef = <Element extends HTMLElement>(
 ): [number, (percent: number) => void] => {
   const buildPercent = (value: number) => `${value}%`
   const [percent, setPercent] = useState<number>(() => clampByPercent(initialValue))
-  const [, setCSSVariable] = useCSSVariableByRef(ref, initialName, () => buildPercent(percent))
+  const [, setCSSVariable] = useCSSVariableAsStringByRef(ref, initialName, () => buildPercent(percent))
 
   const updatePercent = (percent: number) => {
     const nextPercent = clampByPercent(percent)

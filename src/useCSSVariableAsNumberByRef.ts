@@ -1,5 +1,5 @@
 import { RefObject, useState } from 'react'
-import { useCSSVariableByRef } from './useCSSVariableByRef'
+import { useCSSVariableAsStringByRef } from './useCSSVariableAsStringByRef'
 
 export const useCSSVariableAsNumberByRef = <Element extends HTMLElement>(
   ref: RefObject<Element>,
@@ -7,7 +7,7 @@ export const useCSSVariableAsNumberByRef = <Element extends HTMLElement>(
   initialValue: number | (() => number) = 0
 ): [number, (value: number) => void] => {
   const [currentValue, setCurrentValue] = useState<number>(initialValue)
-  const [, setCSSVariable] = useCSSVariableByRef(ref, initialName, currentValue.toString())
+  const [, setCSSVariable] = useCSSVariableAsStringByRef(ref, initialName, currentValue.toString())
 
   const updateValue = (value: number) => {
     setCSSVariable(value.toString())

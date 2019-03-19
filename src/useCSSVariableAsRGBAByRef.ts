@@ -1,7 +1,7 @@
 import { RefObject, SetStateAction, useMemo, useState } from 'react'
 import { RGB, RGBA } from './Color'
 import { clampByHex, clampByPercent } from './lib/clamp'
-import { useCSSVariableByRef } from './useCSSVariableByRef'
+import { useCSSVariableAsStringByRef } from './useCSSVariableAsStringByRef'
 
 export type Hook = State & Dispatch
 
@@ -26,7 +26,7 @@ export const useCSSVariableAsRGBAByRef = <Element extends HTMLElement>(
   const [rgbaArray, setRGBAArray] = useState<RGBA>(initializeRGBA)
 
   const buildRGBA = ([red, green, blue, alpha]: RGBA) => `rgb(${red} ${green} ${blue} / ${alpha}%)`
-  const [, setCSSVariable] = useCSSVariableByRef(ref, initialName, () => buildRGBA(rgbaArray))
+  const [, setCSSVariable] = useCSSVariableAsStringByRef(ref, initialName, () => buildRGBA(rgbaArray))
 
   const initializeHook = (): Hook => {
     const getValue = (state: SetStateAction<number>, it: number) => (typeof state === 'number' ? state : state(it))
