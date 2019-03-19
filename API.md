@@ -20,11 +20,11 @@
 
 ## by Root Element
 
-The CSS Variable is manipulated on the `<html>` element, the root element of HTML5, and is based on [`useCSSVariableByRef`](#useCSSVariableinitialName-string-initialValue-string-|--=-string) Custom Hooks.
+The CSS Variable is manipulated on the `<html>` element, the root element of HTML5, and is based on [`useCSSVariableByRef`](#useCSSVariableByRef) Custom Hooks.
 
 ### useCSSVariable
 
-alias to [useCSSVariableAsString](#useCSSVariableAsString)
+this API is sugar and alias to [useCSSVariableAsString](#useCSSVariableAsString)
 
 ### useCSSVariableAsString
 
@@ -67,7 +67,7 @@ const [foo, setFoo]: Hook = useCSSVariableAsPercent('foo') // --foo: 0%
 const [bar, setBar]: Hook = useCSSVariableAsPercent('bar', 33) // --bar: 33%
 ```
 
-Automatically clamps from 0 to 100
+Automatically clamps from 0% to 100%
 
 - initialValue
 
@@ -196,6 +196,8 @@ const ref = useRef<HTMLDivElement>(null)
 const [foo, setFoo]: Hook = useCSSVariableAsPercent('foo') // --foo: 0%
 const [bar, setBar]: Hook = useCSSVariableAsPercent('bar', 33) // --bar: 33%
 ```
+
+Automatically clamps from 0% to 100%
 
 - initialValue
 

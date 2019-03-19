@@ -21,12 +21,19 @@ import React, { FC } from 'react'
 import { useCSSVariable } from 'use-css-variable'
 
 export const Component: FC = () => {
-  const [foo, setFoo] = useCSSVariable('foo')
-  ...
+  const [foo, setFoo] = useCSSVariable('foo') // --foo
 }
 ```
 
 See the [API](./API.md) for more details
+
+# roadmap
+
+support
+
+- hsl
+- hsla
+- radian
 
 # Lincense
 
