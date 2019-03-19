@@ -1,32 +1,32 @@
 # API
 
-- [`by Root Element`](#by-Root-Element)
+- [by Root Element](#by-Root-Element)
 
-  - [useCSSVariable](#useCSSVariable)
-  - [useCSSVariableAsString](#useCSSVariableAsString)
-  - [useCSSVariableAsNumber](#useCSSVariableAsNumber)
-  - [useCSSVariableAsPercent](#useCSSVariableAsPercent)
-  - [useCSSVariableAsRGB](#useCSSVariableAsRGB)
-  - [useCSSVariableAsRGBA](#useCSSVariableAsRGBA)
+  - [`useCSSVariable`](#useCSSVariable)
+  - [`useCSSVariableAsString`](#useCSSVariableAsString)
+  - [`useCSSVariableAsNumber`](#useCSSVariableAsNumber)
+  - [`useCSSVariableAsPercent`](#useCSSVariableAsPercent)
+  - [`useCSSVariableAsRGB`](#useCSSVariableAsRGB)
+  - [`useCSSVariableAsRGBA`](#useCSSVariableAsRGBA)
 
 - [by Custom Element](#by-Custom-Element)
 
-  - [useCSSVariableByRef](#useCSSVariableByRef)
-  - [useCSSVariableAsStringByRef](#useCSSVariableAsStringByRef)
-  - [useCSSVariableAsNumberByRef](#useCSSVariableAsNumberByRef)
-  - [useCSSVariableAsPercentByRef](#useCSSVariableAsPercentByRef)
-  - [useCSSVariableAsRGBByRef](#useCSSVariableAsRGBByRef)
-  - [useCSSVariableAsRGBAByRef](#useCSSVariableAsRGBAByRef)
+  - [`useCSSVariableByRef`](#useCSSVariableByRef)
+  - [`useCSSVariableAsStringByRef`](#useCSSVariableAsStringByRef)
+  - [`useCSSVariableAsNumberByRef`](#useCSSVariableAsNumberByRef)
+  - [`useCSSVariableAsPercentByRef`](#useCSSVariableAsPercentByRef)
+  - [`useCSSVariableAsRGBByRef`](#useCSSVariableAsRGBByRef)
+  - [`useCSSVariableAsRGBAByRef`](#useCSSVariableAsRGBAByRef)
 
 ## by Root Element
 
 The CSS Variable is manipulated on the `<html>` element, the root element of HTML5, and is based on [`useCSSVariableByRef`](#useCSSVariableByRef) Custom Hooks.
 
-### useCSSVariable
+### `useCSSVariable`
 
 this API is sugar and alias to [useCSSVariableAsString](#useCSSVariableAsString)
 
-### useCSSVariableAsString
+### `useCSSVariableAsString`
 
 ```typescript
 import { useCSSVariableAsString } from 'use-css-variable'
@@ -41,7 +41,7 @@ const [bar, setBar]: Hook = useCSSVariableAsString('bar', 'baz') // --bar: baz
 
   If not provided, change the value of the CSS Custom Property to `''`.
 
-### useCSSVariableAsNumber
+### `useCSSVariableAsNumber`
 
 ```typescript
 import { useCSSVariableAsNumber } from 'use-css-variable'
@@ -56,7 +56,7 @@ const [bar, setBar]: Hook = useCSSVariableAsNumber('bar', 33) // --bar: 33
 
   If not provided, change the value of the CSS Custom Property to `0`.
 
-### useCSSVariableAsPercent
+### `useCSSVariableAsPercent`
 
 ```typescript
 import { useCSSVariableAsPercent } from 'use-css-variable'
@@ -73,7 +73,7 @@ Automatically clamps from 0% to 100%
 
   If not provided, change the value of the CSS Custom Property to `0%`.
 
-### useCSSVariableAsRGB
+### `useCSSVariableAsRGB`
 
 ```typescript
 import { useCSSVariableAsRGB } from 'use-css-variable'
@@ -103,7 +103,7 @@ array[2]: means b in rgb, from 0 to 255, automatically clamping
 
   If not provided, change the value of the CSS Custom Property to `rgb(0 0 0)`.
 
-### useCSSVariableAsRGBA
+### `useCSSVariableAsRGBA`
 
 ```typescript
 import { useCSSVariableAsRGBA } from 'use-css-variable'
@@ -137,11 +137,11 @@ array[3]: means a in rgba, from 0% to 100%, automatically clamping
 
 ## by Custom Element
 
-### useCSSVariableByRef
+### `useCSSVariableByRef`
 
 alias to [useCSSVariableAsStringByRef](#useCSSVariableAsStringByRef)
 
-### useCSSVariableAsStringByRef
+### `useCSSVariableAsStringByRef`
 
 ```typescript
 import { useCSSVariableAsStringByRef } from 'use-css-variable'
@@ -161,7 +161,7 @@ const [bar, setBar]: Hook = useCSSVariableAsStringByRef(ref, 'bar', 'baz') // --
 
   If not provided, change the value of the CSS Custom Property to `''`.
 
-### useCSSVariableAsNumberByRef
+### `useCSSVariableAsNumberByRef`
 
 ```typescript
 import { useCSSVariableAsNumberByRef } from 'use-css-variable'
@@ -181,7 +181,7 @@ const [bar, setBar]: Hook = useCSSVariableAsNumber('bar', 33) // --bar: 33
 
   If not provided, change the value of the CSS Custom Property to `0`.
 
-### useCSSVariableAsPercentByRef
+### `useCSSVariableAsPercentByRef`
 
 ```typescript
 import { useCSSVariableAsPercentByRef } from 'use-css-variable'
@@ -203,7 +203,7 @@ Automatically clamps from 0% to 100%
 
   If not provided, change the value of the CSS Custom Property to `0%`.
 
-### useCSSVariableAsRGBByRef
+### `useCSSVariableAsRGBByRef`
 
 ```typescript
 import { useCSSVariableAsRGBByRef } from 'use-css-variable'
@@ -234,7 +234,7 @@ array[2]: means b in rgb, from 0 to 255, automatically clamping
 
   If not provided, change the value of the CSS Custom Property to `rgb(0 0 0)`.
 
-### useCSSVariableAsRGBAByRef
+### `useCSSVariableAsRGBAByRef`
 
 ```typescript
 import { useCSSVariableAsRGBAByRef } from 'use-css-variable'
