@@ -67,6 +67,8 @@ const [foo, setFoo]: Hook = useCSSVariableAsPercent('foo') // --foo: 0%
 const [bar, setBar]: Hook = useCSSVariableAsPercent('bar', 33) // --bar: 33%
 ```
 
+Automatically clamps from 0 to 100
+
 - initialValue
 
   If not provided, change the value of the CSS Custom Property to `0%`.
@@ -92,6 +94,10 @@ type SetStateAction = number | ((previousValue: number) => number)
 const black: Hook = useCSSVariableAsRGB('foo') // --foo: rgb(0 0 0)
 const red: Hook = useCSSVariableAsRGB('bar', [255, 0, 0]) // --bar: rgb(255 0 0)
 ```
+
+array[0]: means r in rgb, from 0 to 255, automatically clamping
+array[1]: means g in rgb, from 0 to 255, automatically clamping
+array[2]: means b in rgb, from 0 to 255, automatically clamping
 
 - initialValue
 
@@ -119,6 +125,11 @@ type SetStateAction = number | ((previousValue: number) => number)
 const black: Hook = useCSSVariableAsRGBA('foo') // --foo: rgb(0 0 0 / 100%)
 const transparentRed: Hook = useCSSVariableAsRGBA('bar', [255, 0, 0, 33]) // --bar: rgb(255 0 0 33%)
 ```
+
+array[0]: means r in rgba, from 0 to 255, automatically clamping
+array[1]: means g in rgba, from 0 to 255, automatically clamping
+array[2]: means b in rgba, from 0 to 255, automatically clamping
+array[3]: means a in rgba, from 0% to 100%, automatically clamping
 
 - initialValue
 
@@ -213,6 +224,10 @@ const black: Hook = useCSSVariableAsRGB('foo') // --foo: rgb(0 0 0)
 const red: Hook = useCSSVariableAsRGB('bar', [255, 0, 0]) // --bar: rgb(255 0 0)
 ```
 
+array[0]: means r in rgb, from 0 to 255, automatically clamping
+array[1]: means g in rgb, from 0 to 255, automatically clamping
+array[2]: means b in rgb, from 0 to 255, automatically clamping
+
 - initialValue
 
   If not provided, change the value of the CSS Custom Property to `rgb(0 0 0)`.
@@ -240,6 +255,11 @@ const ref = useRef<HTMLDivElement>(null)
 const black: Hook = useCSSVariableAsRGBA('foo') // --foo: rgb(0 0 0 / 100%)
 const transparentRed: Hook = useCSSVariableAsRGBA('bar', [255, 0, 0, 33]) // --bar: rgb(255 0 0 / 33%)
 ```
+
+array[0]: means r in rgba, from 0 to 255, automatically clamping
+array[1]: means g in rgba, from 0 to 255, automatically clamping
+array[2]: means b in rgba, from 0 to 255, automatically clamping
+array[3]: means a in rgba, from 0% to 100%, automatically clamping
 
 - initialValue
 
