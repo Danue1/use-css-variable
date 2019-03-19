@@ -1,6 +1,6 @@
 {
   "name": "use-css-variable",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A pretty custom hooks for css variable and react",
   "license": "MIT",
   "main": "./dist/index.js",
