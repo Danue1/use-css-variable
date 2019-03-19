@@ -26,6 +26,8 @@ export const Component: FC = () => {
 }
 ```
 
+See the [API](./API.md) for more details
+
 # Lincense
 
 [MIT](./LICENSE)
