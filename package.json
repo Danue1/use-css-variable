@@ -1,0 +1,41 @@
+{
+  "name": "use-css-variable",
+  "version": "0.1.2",
+  "description": "A pretty custom hooks for css variable and react",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "compile": "tsc ./src/index.ts --jsx react --declaration --outDir ./dist",
+    "clean": "rimraf dist",
+    "build": "npm run clean && npm run compile",
+    "publisher": "npm run build && npm publish"
+  },
+  "homepage": "https://github.com/Danue1/use-css-variable",
+  "repository": "Danue1/use-css-variable",
+  "bugs": "https://github.com/Danue1/use-css-variable/issues",
+  "keywords": [
+    "react",
+    "react-dom",
+    "react-hooks",
+    "hooks",
+    "custom hooks",
+    "css",
+    "variable",
+    "variables",
+    "css-variable",
+    "css-variables",
+    "react-css",
+    "react-css-variable",
+    "custom",
+    "property",
+    "properties",
+    "custom-property",
+    "custom-properties"
+  ],
+  "devDependencies": {
+    "@types/react": "^16.8.8",
+    "rimraf": "^2.6.3",
+    "typescript": "^3.3.3333"
+  }
+}
